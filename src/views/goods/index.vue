@@ -2,7 +2,7 @@
   <div class="goods">
     <van-swipe class="goods-swipe" :autoplay="3000">
       <van-swipe-item v-for="thumb in goods.thumb" :key="thumb">
-        <img :src="thumb" >
+        <img :src="thumb">
       </van-swipe-item>
     </van-swipe>
 
@@ -61,7 +61,7 @@ import {
   GoodsAction,
   GoodsActionIcon,
   GoodsActionButton
-} from 'vant';
+} from 'vant'
 
 export default {
   components: {
@@ -89,23 +89,23 @@ export default {
           'https://img.yzcdn.cn/public_files/2017/10/24/1791ba14088f9c2be8c610d0a6cc0f93.jpeg'
         ]
       }
-    };
+    }
   },
 
   methods: {
     formatPrice() {
-      return '¥' + (this.goods.price / 100).toFixed(2);
+      return '¥' + (this.goods.price / 100).toFixed(2)
     },
 
     onClickCart() {
-      this.$router.push('cart');
+      this.$router.push('cart')
     },
 
     sorry() {
-      Toast('暂无后续逻辑~');
+      Toast('暂无后续逻辑~')
     }
   }
-};
+}
 </script>
 
 <style lang="less">

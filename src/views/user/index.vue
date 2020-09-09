@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { Row, Col, Icon, Cell, CellGroup } from 'vant';
+import { Row, Col, Icon, Cell, CellGroup } from 'vant'
 
 export default {
   components: {
@@ -43,7 +43,7 @@ export default {
     [Cell.name]: Cell,
     [CellGroup.name]: CellGroup
   }
-};
+}
 </script>
 
 <style lang="less">

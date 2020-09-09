@@ -1,10 +1,10 @@
 <template>
   <div>
-    <van-checkbox-group class="card-goods" v-model="checkedGoods">
+    <van-checkbox-group v-model="checkedGoods" class="card-goods">
       <van-checkbox
-        class="card-goods__item"
         v-for="item in goods"
         :key="item.id"
+        class="card-goods__item"
         :name="item.id"
       >
         <van-card
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { Checkbox, CheckboxGroup, Card, SubmitBar, Toast } from 'vant';
+import { Checkbox, CheckboxGroup, Card, SubmitBar, Toast } from 'vant'
 
 export default {
   components: {
@@ -61,30 +61,30 @@ export default {
         num: 1,
         thumb: 'https://img.yzcdn.cn/public_files/2017/10/24/320454216bbe9e25c7651e1fa51b31fd.jpeg'
       }]
-    };
+    }
   },
 
   computed: {
     submitBarText() {
-      const count = this.checkedGoods.length;
-      return '结算' + (count ? `(${count})` : '');
+      const count = this.checkedGoods.length
+      return '结算' + (count ? `(${count})` : '')
     },
 
     totalPrice() {
-      return this.goods.reduce((total, item) => total + (this.checkedGoods.indexOf(item.id) !== -1 ? item.price : 0), 0);
+      return this.goods.reduce((total, item) => total + (this.checkedGoods.indexOf(item.id) !== -1 ? item.price : 0), 0)
     }
   },
 
   methods: {
     formatPrice(price) {
-      return (price / 100).toFixed(2);
+      return (price / 100).toFixed(2)
     },
 
     onSubmit() {
-      Toast('点击结算');
+      Toast('点击结算')
     }
   }
-};
+}
 </script>
 
 <style lang="less">
