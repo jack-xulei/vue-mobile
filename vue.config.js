@@ -11,7 +11,8 @@ module.exports = {
           autoprefixer(),
           pxtoviewport({
             viewportWidth: 375,
-            exclude: [/node_modules/]
+            exclude: [/node_modules/],
+            propList: ['*', '!font*']
           })
         ]
       }
