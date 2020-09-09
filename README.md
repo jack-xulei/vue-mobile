@@ -1,4 +1,4 @@
-# vue-vant
+# vue-mobile
 
 ## Project setup
 ```
