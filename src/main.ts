@@ -5,6 +5,8 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+import '@/icons' // icon
+
 new Vue({
   router,
   store,
