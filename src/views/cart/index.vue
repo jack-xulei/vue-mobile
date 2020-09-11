@@ -25,10 +25,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import { Checkbox, CheckboxGroup, Card, SubmitBar, Toast } from 'vant'
 
-export default {
+export default Vue.extend({
   components: {
     [Card.name]: Card,
     [Checkbox.name]: Checkbox,
@@ -65,18 +66,18 @@ export default {
   },
 
   computed: {
-    submitBarText() {
+    submitBarText() : string {
       const count = this.checkedGoods.length
       return '结算' + (count ? `(${count})` : '')
     },
 
-    totalPrice() {
+    totalPrice() : number {
       return this.goods.reduce((total, item) => total + (this.checkedGoods.indexOf(item.id) !== -1 ? item.price : 0), 0)
     }
   },
 
   methods: {
-    formatPrice(price) {
+    formatPrice(price: number) {
       return (price / 100).toFixed(2)
     },
 
@@ -84,7 +85,7 @@ export default {
       Toast('点击结算')
     }
   }
-}
+})
 </script>
 
 <style lang="less">

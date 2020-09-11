@@ -32,10 +32,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import { Row, Col, Icon, Cell, CellGroup } from 'vant'
 
-export default {
+export default Vue.extend({
   components: {
     [Row.name]: Row,
     [Col.name]: Col,
@@ -43,7 +44,7 @@ export default {
     [Cell.name]: Cell,
     [CellGroup.name]: CellGroup
   }
-}
+})
 </script>
 
 <style lang="less">
