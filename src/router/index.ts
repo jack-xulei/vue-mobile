@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 const routes: Array<RouteConfig> = [
   {
     path: '*',
-    redirect: '/goods'
+    redirect: '/login'
   },
   {
     path: '/user',
@@ -31,6 +31,12 @@ const routes: Array<RouteConfig> = [
     meta: {
       title: '商品详情'
     }
+  },
+  {
+    // 登录
+    path: '/Login',
+    name: 'login',
+    component: () => import('../views/login/index.vue')
   }
 ]
 
