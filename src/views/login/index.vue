@@ -237,7 +237,7 @@ export default {
           })
           return
         }
-        this.$router.back()
+        this.$router.push('/goods')
       } else {
         if (this.login_userName.length < 1) {
           Toast({
